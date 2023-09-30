@@ -50,3 +50,9 @@ Precompiled builds are to be found in the builds directory. Obviously you should
 ### Updates
 
 I do need to make the quotes.go file work better, so that's on the TODO
+
+### Software Bill of Materials
+
+For those who like this, and you kinda should, I've included a CycloneDX BOM in the root of the project
+
+![](img/sbom.png)

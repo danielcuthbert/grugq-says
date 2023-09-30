@@ -1,0 +1,90 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "serialNumber": "urn:uuid:576450f8-71bd-470a-916b-c700f4fdb5f3",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2023-09-30T08:46:44.090Z",
+    "tools": {
+      "components": [
+        {
+          "group": "@cyclonedx",
+          "name": "cdxgen",
+          "version": "9.8.4",
+          "purl": "pkg:npm/%40cyclonedx/cdxgen@9.8.4",
+          "type": "application",
+          "bom-ref": "pkg:npm/@cyclonedx/cdxgen@9.8.4"
+        }
+      ]
+    },
+    "authors": [
+      {
+        "name": "Prabhu Subramanian",
+        "email": "prabhu@appthreat.com"
+      }
+    ]
+  },
+  "components": [
+    {
+      "group": "",
+      "name": "golang.org/x/sys",
+      "version": "v0.12.0",
+      "scope": "optional",
+      "licenses": [],
+      "purl": "pkg:golang/golang.org/x/sys@v0.12.0",
+      "type": "library",
+      "bom-ref": "pkg:golang/golang.org/x/sys@v0.12.0",
+      "properties": [
+        {
+          "name": "SrcGoMod",
+          "value": "/Users/daniel/go/pkg/mod/cache/download/golang.org/x/sys/@v/v0.12.0.mod"
+        },
+        {
+          "name": "ModuleGoVersion",
+          "value": "1.17"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "golang.org/x/term",
+      "version": "v0.12.0",
+      "scope": "required",
+      "licenses": [],
+      "purl": "pkg:golang/golang.org/x/term@v0.12.0",
+      "type": "library",
+      "bom-ref": "pkg:golang/golang.org/x/term@v0.12.0",
+      "properties": [
+        {
+          "name": "SrcGoMod",
+          "value": "/Users/daniel/go/pkg/mod/cache/download/golang.org/x/term/@v/v0.12.0.mod"
+        },
+        {
+          "name": "ModuleGoVersion",
+          "value": "1.17"
+        }
+      ]
+    },
+    {
+      "group": "",
+      "name": "grugq-says",
+      "version": "",
+      "scope": "required",
+      "licenses": [],
+      "purl": "pkg:golang/grugq-says",
+      "type": "library",
+      "bom-ref": "pkg:golang/grugq-says",
+      "properties": [
+        {
+          "name": "SrcGoMod",
+          "value": "/Users/daniel/code/grugq-says/go.mod"
+        },
+        {
+          "name": "ModuleGoVersion",
+          "value": "1.21.0"
+        }
+      ]
+    }
+  ],
+  "dependencies": []
+}
