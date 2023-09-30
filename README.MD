@@ -45,6 +45,8 @@ Linux
 GOOS=linux GOARCH=386 go build -o grugq-says main.go
 ```
 
+Precompiled builds are to be found in the builds directory. Obviously you should fully reverse engineer these before you run them, but the shah-3-256 checksums are available too if you so wish to validate. 
+
 ### Updates
 
 I do need to make the quotes.go file work better, so that's on the TODO
