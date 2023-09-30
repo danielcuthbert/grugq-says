@@ -13,7 +13,10 @@ import (
 	"math/rand"
 	"net/http"
 	"os"
+	"syscall"
 	"time"
+
+	"golang.org/x/term"
 )
 
 const (
@@ -71,10 +74,33 @@ func main() {
 	// The higher the value, the more verbose the response.
 	// 100 seems to be the sweet spot
 	enrichment := generateExplanation(randomQuote, "davinci", 100)
+
+	// we need to use the printcentre function to make it look pretty
+	enrichment = wrapEnrichment(enrichment)
+
 	printColored(Green, "The Grugq Says:", randomQuote)
 	printColored(Blue, "We mortals can interpret it as:", enrichment)
 
 }
+
+// wrapEnrichment takes a string as input, and returns the string wrapped in a specific format.
+func wrapEnrichment(enrichment string) string {
+	// Get the terminal width.
+	terminalWidth, _, err := term.GetSize(int(syscall.Stdin))
+	if err != nil {
+		fmt.Println(err)
+		return ""
+	}
+
+	// Calculate the number of spaces to indent the response.
+	padding := terminalWidth/2 - len(enrichment)/2
+
+	// Print the response in a specific format.
+	return fmt.Sprintf("%*s%s", padding, "", enrichment)
+}
+
+// you need to set the OPENAI_API_KEY environment variable to your API key
+// friends dont let friends stick it in the code, kapish? :)
 
 // getRandomQuote takes a map as input, and returns a random quote from that map.
 
